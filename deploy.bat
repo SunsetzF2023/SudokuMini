@@ -19,7 +19,8 @@ git commit -m "Update: %timestamp%"
 REM 推送到 GitHub
 git push origin master
 
-echo ✅ 部署完成！
+echo ✅ 代码推送完成！
+echo 🔄 GitHub Actions 将自动构建并部署
 echo 📱 GitHub Pages 将在几分钟内自动更新
 echo 🔗 访问地址: https://sunsetzf2023.github.io/SudokuMini/
 pause
