@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-editor-bg text-editor-text font-mono;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+}
+
+@layer components {
+  .sudoku-cell {
+    @apply border border-editor-border bg-editor-surface text-editor-text;
+    @apply flex items-center justify-center text-lg font-mono cursor-pointer;
+    @apply transition-all duration-150;
+  }
+  
+  .sudoku-cell:hover {
+    @apply bg-editor-highlight;
+  }
+  
+  .sudoku-cell.selected {
+    @apply bg-editor-selected border-editor-accent;
+  }
+  
+  .sudoku-cell.fixed {
+    @apply text-gray-400 cursor-default;
+    @apply bg-opacity-50;
+  }
+  
+  .sudoku-cell.error {
+    @apply bg-red-900 bg-opacity-30 border-red-500;
+  }
+  
+  .sudoku-cell.highlighted {
+    @apply bg-editor-highlight bg-opacity-50;
+  }
+  
+  .number-button {
+    @apply bg-editor-surface border border-editor-border text-editor-text;
+    @apply px-4 py-2 font-mono text-lg cursor-pointer;
+    @apply transition-all duration-150;
+  }
+  
+  .number-button:hover {
+    @apply bg-editor-highlight border-editor-accent;
+  }
+  
+  .number-button:active {
+    @apply bg-editor-selected;
+  }
+}
