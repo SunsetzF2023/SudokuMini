@@ -45,29 +45,45 @@ npm run build
 npm run preview
 ```
 
-## 部署到 GitHub Pages
+## 快速部署
 
-### 1. 配置 GitHub Pages
+### 方法一：使用部署脚本（推荐）
 
-项目已配置好 GitHub Pages 部署，只需要：
+**Windows 用户：**
+```bash
+deploy.bat
+```
+
+**Linux/Mac 用户：**
+```bash
+./deploy.sh
+```
+
+### 方法二：手动部署
+
+```bash
+git add .
+git commit -m "你的更新说明"
+git push origin master
+```
+
+### 方法三：使用 npm 脚本
 
 ```bash
 npm run deploy
 ```
 
-### 2. 手动部署
+部署完成后，GitHub Pages 会在几分钟内自动更新。
 
-如果需要手动部署到 GitHub Pages：
+🌐 **在线访问地址**: https://sunsetzf2023.github.io/SudokuMini/
 
-1. 构建项目：
-   ```bash
-   npm run build
-   ```
+## 开发工作流
 
-2. 将 `dist` 目录推送到 `gh-pages` 分支：
-   ```bash
-   git subtree push --prefix dist origin gh-pages
-   ```
+1. **本地开发**：使用 `npm run dev` 启动开发服务器
+2. **修改代码**：进行你的调试和修改
+3. **测试验证**：在本地确认功能正常
+4. **一键部署**：运行 `deploy.bat`（Windows）或 `./deploy.sh`（Linux/Mac）
+5. **在线查看**：等待几分钟后访问 GitHub Pages 链接
 
 ## 游戏操作
 
